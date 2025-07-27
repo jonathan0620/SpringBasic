@@ -8,6 +8,8 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class MemberApp {
 
+    private static MemberService memberService;
+
     public static void main(String[] args) {
 //        AppConfig appConfig = new AppConfig();
 //        MemberService memberService = appConfig.memberService();
