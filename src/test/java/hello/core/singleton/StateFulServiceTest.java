@@ -16,15 +16,15 @@ class StateFulServiceTest {
         StateFulService stateFulService2 = ac.getBean(StateFulService.class);
 
         // ThreadA : A 사용자 10000원 주문
-        stateFulService1.order("userA", 10000);
+        int userAPrice = stateFulService1.order("userA", 10000);
         // ThreadB : B 사용자 20000원 주문
-        stateFulService1.order("userb", 20000);
+        int userBPrice = stateFulService1.order("userb", 20000);
 
         // ThreadA: 사용자 A 주문 금액 조회
-        int price = stateFulService1.getPrice();
-        System.out.println("price = " + price);
+//        int price = stateFulService1.getPrice();
+        System.out.println("price = " + userAPrice);
 
-        Assertions.assertThat(stateFulService1.getPrice()).isEqualTo(20000);
+//        Assertions.assertThat(stateFulService1.getPrice()).isEqualTo(20000);
     }
 
     static class TestConfig {
