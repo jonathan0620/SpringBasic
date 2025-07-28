@@ -1,4 +1,4 @@
-package singleton;
+package hello.core.singleton;
 
 public class SingletonService {
     // 내부에 private로 가지고 있고 static 레벨에 올라가서 딱 하나만 존재하게 된다.
